@@ -1,10 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { NativeBaseProvider, Box } from 'native-base';
 
-const App = () => {
-	return (
-		<Text>Built the app!</Text>
-	);
-};
+function App() {
+  return (
+    <NativeBaseProvider>
+      <Box>Hello world</Box>
+    </NativeBaseProvider>
+  );
+}
 
 export default App;
