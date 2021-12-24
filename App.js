@@ -1,5 +1,11 @@
 import React from 'react';
-import { VStack, Center, Heading, NativeBaseProvider } from "native-base"
+import { VStack, Center, Heading, NativeBaseProvider } from "native-base";
+
+export function PriceTile(props) {
+	return (
+		<Center w="72" h="40" bg={props.bgColor} rounded="lg" shadow={3} />
+	);
+}
 
 export function GasPrice() {
 	return (
@@ -7,11 +13,11 @@ export function GasPrice() {
 			<Heading textAlign="center" mb="10" mt="10">
 				Gas Price
 			</Heading>
-			<Center w="72" h="40" bg="primary.500" rounded="lg" shadow={3} />
-			<Center w="72" h="40" bg="secondary.500" rounded="lg" shadow={3} />
-			<Center w="72" h="40" bg="emerald.500" rounded="lg" shadow={3} />
+			<PriceTile bgColor="#F54634" />
+			<PriceTile bgColor="#005FF9"/>
+			<PriceTile bgColor="#00C66B"/>
 		</VStack>
-	)
+	);
 }
 
 function App() {
