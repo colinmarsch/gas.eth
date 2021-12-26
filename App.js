@@ -3,7 +3,10 @@ import { VStack, Center, Heading, NativeBaseProvider } from "native-base";
 
 export function PriceTile(props) {
 	return (
-		<Center w="72" h="40" bg={props.bgColor} rounded="lg" shadow={3} />
+		// TODO: Add the title text in top left
+		// TODO: Add the price in center of center
+		// TODO: Add one line description at the bottom
+		<Center width="90%" h="25%" bg={props.bgColor} rounded="lg" shadow={3} />
 	);
 }
 
