@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet } from "react-native";
 import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export function PriceTile(props) {
 	return (
-		<Box width="90%" h="25%" bg={props.bgColor} rounded="lg" shadow={3}>
+		<Box width="90%" h="28%" bg={props.bgColor} rounded="lg" shadow={3}>
 			<Text style={styles.titleText}>
 				{props.title}
 			</Text>
@@ -21,9 +22,6 @@ export function PriceTile(props) {
 export function GasPrice() {
 	return (
 		<VStack space={4} alignItems="center">
-			<Heading textAlign="center" mb="10" mt="10">
-				Gas Price
-			</Heading>
 			<PriceTile bgColor="#F54634" title="Instant" price="100" description="Almost-guaranteed next block inclusion" />
 			<PriceTile bgColor="#005FF9" title="Fast" price="75" description="Useful if not minting NFTs" />
 			<PriceTile bgColor="#00C66B" title="Eco" price="25" description="Usually confirmed within an hour" />
@@ -34,6 +32,12 @@ export function GasPrice() {
 function App() {
 	return (
 		<NativeBaseProvider>
+			<Box style={styles.headerBox}>
+				<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
+					Gas Price
+				</Heading>
+				<Icon name="refresh" size={30} color="#343434" style={styles.refreshButton} />
+			</Box>
 			<GasPrice />
 		</NativeBaseProvider>
 	);
@@ -59,6 +63,17 @@ const styles = StyleSheet.create({
 		color: "white",
 		textAlign: "center",
 		paddingTop: 12,
+	},
+	headerBox: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+	},
+	headingText: {
+		paddingStart: 24,
+	},
+	refreshButton: {
+		alignSelf: 'center',
+		paddingEnd: 26,
 	},
 });
 
