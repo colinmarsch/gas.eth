@@ -4,13 +4,15 @@ import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
 
 export function PriceTile(props) {
 	return (
-		// TODO: Add one line description at the bottom
 		<Box width="90%" h="25%" bg={props.bgColor} rounded="lg" shadow={3}>
 			<Text style={styles.titleText}>
 				{props.title}
 			</Text>
 			<Text style={styles.priceText}>
 				{props.price}
+			</Text>
+			<Text style={styles.descText}>
+				{props.description}
 			</Text>
 		</Box>
 	);
@@ -22,9 +24,9 @@ export function GasPrice() {
 			<Heading textAlign="center" mb="10" mt="10">
 				Gas Price
 			</Heading>
-			<PriceTile bgColor="#F54634" title="Instant" price="100" />
-			<PriceTile bgColor="#005FF9" title="Fast" price="75" />
-			<PriceTile bgColor="#00C66B" title="Eco" price="25" />
+			<PriceTile bgColor="#F54634" title="Instant" price="100" description="Almost-guaranteed next block inclusion" />
+			<PriceTile bgColor="#005FF9" title="Fast" price="75" description="Useful if not minting NFTs" />
+			<PriceTile bgColor="#00C66B" title="Eco" price="25" description="Usually confirmed within an hour" />
 		</VStack>
 	);
 }
@@ -50,6 +52,13 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		color: "white",
 		textAlign: "center",
+	},
+	descText: {
+		fontSize: 16,
+		fontWeight: "normal",
+		color: "white",
+		textAlign: "center",
+		paddingTop: 12,
 	},
 });
 
