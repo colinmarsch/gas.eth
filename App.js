@@ -2,10 +2,11 @@ import React from 'react';
 import { Text, StyleSheet } from "react-native";
 import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { format } from "date-fns";
 
 export function PriceTile(props) {
 	return (
-		<Box width="90%" h="28%" bg={props.bgColor} rounded="lg" shadow={3}>
+		<Box width="90%" h="27%" bg={props.bgColor} rounded="lg" shadow={3}>
 			<Text style={styles.titleText}>
 				{props.title}
 			</Text>
@@ -39,8 +40,11 @@ export default class GasPrice extends React.Component {
 				},
 				baseFee: 100.01,
 				ethPrice: 4000.01
-			}
+			},
+			lastUpdatedTime: "Never"
 		}
+
+		this.fetch()
 	}
 
 	fetch() {
@@ -50,10 +54,12 @@ export default class GasPrice extends React.Component {
 			.then((response) => response.json())
 			.then((json) => {
 				context.setState({
-					result: json.result
+					result: json.result,
+					lastUpdatedTime: format(new Date(), "MMMM do, yyyy h:mma")
 				});
 			})
 			.catch((error) => {
+				// TODO Add user facing error reporting here (toast?)
 				console.error(error);
 			});
 	}
@@ -71,6 +77,7 @@ export default class GasPrice extends React.Component {
 					<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} description="Almost-guaranteed next block inclusion" />
 					<PriceTile bgColor="#005FF9" title="Fast" price={Math.ceil(this.state.result.fast.feeCap)} description="Useful if not minting NFTs" />
 					<PriceTile bgColor="#00C66B" title="Eco" price={Math.ceil(this.state.result.eco.feeCap)} description="Usually confirmed within an hour" />
+					<Text style={styles.lastUpdatedText}>Last updated: {this.state.lastUpdatedTime}</Text>
 				</VStack>
 			</NativeBaseProvider>
 		);
@@ -108,5 +115,8 @@ const styles = StyleSheet.create({
 	refreshButton: {
 		alignSelf: 'center',
 		paddingEnd: 26,
+	},
+	lastUpdatedText: {
+		fontSize: 16,
 	},
 });
