@@ -3,6 +3,7 @@ import { Text, StyleSheet } from "react-native";
 import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { format } from "date-fns";
+import Toast from 'react-native-toast-message';
 
 export function PriceTile(props) {
 	return (
@@ -59,27 +60,33 @@ export default class GasPrice extends React.Component {
 				});
 			})
 			.catch((error) => {
-				// TODO Add user facing error reporting here (toast?)
+				Toast.show({
+					type: 'error',
+					text1: 'Refresh failed. Please try again.',
+				});
 				console.error(error);
 			});
 	}
 
 	render() {
 		return (
-			<NativeBaseProvider>
-				<Box style={styles.headerBox}>
-					<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
-						Gas Price
-					</Heading>
-					<Icon name="refresh" size={30} color="#343434" style={styles.refreshButton} onPress={this.fetch.bind(this)} />
-				</Box>
-				<VStack space={4} alignItems="center">
-					<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} description="Almost-guaranteed next block inclusion" />
-					<PriceTile bgColor="#005FF9" title="Fast" price={Math.ceil(this.state.result.fast.feeCap)} description="Useful if not minting NFTs" />
-					<PriceTile bgColor="#00C66B" title="Eco" price={Math.ceil(this.state.result.eco.feeCap)} description="Usually confirmed within an hour" />
-					<Text style={styles.lastUpdatedText}>Last updated: {this.state.lastUpdatedTime}</Text>
-				</VStack>
-			</NativeBaseProvider>
+			<>
+				<NativeBaseProvider>
+					<Box style={styles.headerBox}>
+						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
+							Gas Price
+						</Heading>
+						<Icon name="refresh" size={30} color="#343434" style={styles.refreshButton} onPress={this.fetch.bind(this)} />
+					</Box>
+					<VStack space={4} alignItems="center">
+						<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} description="Almost-guaranteed next block inclusion" />
+						<PriceTile bgColor="#005FF9" title="Fast" price={Math.ceil(this.state.result.fast.feeCap)} description="Useful if not minting NFTs" />
+						<PriceTile bgColor="#00C66B" title="Eco" price={Math.ceil(this.state.result.eco.feeCap)} description="Usually confirmed within an hour" />
+						<Text style={styles.lastUpdatedText}>Last updated: {this.state.lastUpdatedTime}</Text>
+					</VStack>
+				</NativeBaseProvider>
+				<Toast />
+			</>
 		);
 	}
 }
