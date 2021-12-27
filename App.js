@@ -19,28 +19,62 @@ export function PriceTile(props) {
 	);
 }
 
-export function GasPrice() {
-	return (
-		<VStack space={4} alignItems="center">
-			<PriceTile bgColor="#F54634" title="Instant" price="100" description="Almost-guaranteed next block inclusion" />
-			<PriceTile bgColor="#005FF9" title="Fast" price="75" description="Useful if not minting NFTs" />
-			<PriceTile bgColor="#00C66B" title="Eco" price="25" description="Usually confirmed within an hour" />
-		</VStack>
-	);
-}
+export default class GasPrice extends React.Component {
+	constructor(props) {
+		super(props);
 
-function App() {
-	return (
-		<NativeBaseProvider>
-			<Box style={styles.headerBox}>
-				<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
-					Gas Price
-				</Heading>
-				<Icon name="refresh" size={30} color="#343434" style={styles.refreshButton} />
-			</Box>
-			<GasPrice />
-		</NativeBaseProvider>
-	);
+		this.state = {
+			result: {
+				instant: {
+					feeCap: 100.01,
+					maxPriorityFee: 100.01
+				},
+				fast: {
+					feeCap: 100.01,
+					maxPriorityFee: 100.01
+				},
+				eco: {
+					feeCap: 100.01,
+					maxPriorityFee: 100.01
+				},
+				baseFee: 100.01,
+				ethPrice: 4000.01
+			}
+		}
+	}
+
+	fetch() {
+		var context = this;
+
+		fetch('https://api.gasprice.io/v1/estimates')
+			.then((response) => response.json())
+			.then((json) => {
+				context.setState({
+					result: json.result
+				});
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	}
+
+	render() {
+		return (
+			<NativeBaseProvider>
+				<Box style={styles.headerBox}>
+					<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
+						Gas Price
+					</Heading>
+					<Icon name="refresh" size={30} color="#343434" style={styles.refreshButton} onPress={this.fetch.bind(this)} />
+				</Box>
+				<VStack space={4} alignItems="center">
+					<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} description="Almost-guaranteed next block inclusion" />
+					<PriceTile bgColor="#005FF9" title="Fast" price={Math.ceil(this.state.result.fast.feeCap)} description="Useful if not minting NFTs" />
+					<PriceTile bgColor="#00C66B" title="Eco" price={Math.ceil(this.state.result.eco.feeCap)} description="Usually confirmed within an hour" />
+				</VStack>
+			</NativeBaseProvider>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
@@ -76,5 +110,3 @@ const styles = StyleSheet.create({
 		paddingEnd: 26,
 	},
 });
-
-export default App;
