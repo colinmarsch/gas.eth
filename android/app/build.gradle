@@ -148,6 +148,14 @@ android {
             keyPassword 'android'
         }
 		release {
+			def tmpFilePath = System.getProperty("user.home") + "/work/_temp/keystore/"
+			def allFilesFromDir = new File(tmpFilePath).listFiles()
+
+			if (allFilesFromDir != null) {
+				def keystoreFile = allFilesFromDir.first()
+				keystoreFile.renameTo("keystore/my-upload-key.keystore")
+			}
+
 			if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
 				storeFile file(MYAPP_UPLOAD_STORE_FILE)
 				storePassword MYAPP_UPLOAD_STORE_PASSWORD
