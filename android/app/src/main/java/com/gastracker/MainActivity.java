@@ -1,4 +1,4 @@
-package com.gastracker;
+package me.colinmarsch.gastracker;
 
 import com.facebook.react.ReactActivity;
 
