@@ -13,9 +13,21 @@ jobs:
       - name: Install npm dependencies
         run: |
           npm install
+       - name: Decode Keystore
+        env:
+            ENCODED_STRING: ${{ secrets.KEYSTORE }}
+        run: |
+            TMP_KEYSTORE_FILE_PATH="${RUNNER_TEMP}"/keystore
+            mkdir "${TMP_KEYSTORE_FILE_PATH}"
+            echo $ENCODED_STRING | base64 -di > "${TMP_KEYSTORE_FILE_PATH}"/my-upload-key.keystore
       - name: Build Android Release
         run: |
           cd android && ./gradlew assembleRelease
+        env:
+          MYAPP_UPLOAD_KEY_ALIAS: ${{ secrets.MYAPP_UPLOAD_KEY_ALIAS }}
+          MYAPP_UPLOAD_KEY_PASSWORD: ${{ secrets.MYAPP_UPLOAD_KEY_PASSWORD }}
+          MYAPP_UPLOAD_STORE_PASSWORD: ${{ secrets.MYAPP_UPLOAD_STORE_PASSWORD }}
+          MYAPP_UPLOAD_STORE_FILE: ${{ secrets.MYAPP_UPLOAD_STORE_FILE }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
