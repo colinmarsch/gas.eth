@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet } from "react-native";
+import { Text, useColorScheme, StyleSheet } from "react-native";
 import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { format } from "date-fns";
@@ -24,7 +24,7 @@ export function PriceTile(props) {
 	);
 }
 
-export default class GasPrice extends React.Component {
+export class GasPrice extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -49,6 +49,7 @@ export default class GasPrice extends React.Component {
 			instantIcon: "minus",
 			fastIcon: "minus",
 			ecoIcon: "minus",
+			theme: props.theme,
 		}
 
 		this.fetch()
@@ -104,10 +105,12 @@ export default class GasPrice extends React.Component {
 			<>
 				<NativeBaseProvider>
 					<Box style={styles.headerBox}>
+						{/* TODO Ensure dark mode is supported on the heading text */}
 						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
 							Gas Price
 						</Heading>
-						<Icon name="sync-alt" size={30} color="#343434" style={styles.refreshButton} onPress={this.fetch.bind(this)} />
+						{/* TODO: Fix onPress not working on the refresh Icon */}
+						<Icon name="sync-alt" size={30} style={styles.refreshButton} onPress={this.fetch.bind(this)} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"} />
 					</Box>
 					<VStack space={4} alignItems="center">
 						<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} iconName={this.state.instantIcon} description="Almost-guaranteed next block inclusion" />
@@ -121,6 +124,13 @@ export default class GasPrice extends React.Component {
 		);
 	}
 }
+
+export default App = () => {
+	const colorScheme = useColorScheme();
+	return (
+		<GasPrice theme={colorScheme} />
+	);
+};
 
 const styles = StyleSheet.create({
 	titleText: {
