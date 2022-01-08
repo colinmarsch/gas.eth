@@ -105,7 +105,7 @@ export class GasPrice extends React.Component {
 			<>
 				<NativeBaseProvider>
 					<Box style={styles.headerBox}>
-						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText} _light={{ color: "#343434" }} _dark={{ color: "#FFFFFF" }}>
+						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"}>
 							Gas Price
 						</Heading>
 						<Icon name="sync-alt" size={30} style={styles.refreshButton} onPress={this.fetch.bind(this)} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"} />
