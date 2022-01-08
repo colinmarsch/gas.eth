@@ -85,7 +85,7 @@ export class GasPrice extends React.Component {
 
 				context.setState({
 					result: json.result,
-					lastUpdatedTime: format(new Date(), "MMMM do, yyyy h:mma"),
+					lastUpdatedTime: format(new Date(), "MMMM do, yyyy h:mm:ss a"),
 					instantIcon: instantIcon,
 					fastIcon: fastIcon,
 					ecoIcon: ecoIcon,
