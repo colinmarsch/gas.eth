@@ -105,11 +105,9 @@ export class GasPrice extends React.Component {
 			<>
 				<NativeBaseProvider>
 					<Box style={styles.headerBox}>
-						{/* TODO Ensure dark mode is supported on the heading text */}
-						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText}>
+						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText} _light={{ color: "#343434" }} _dark={{ color: "#FFFFFF" }}>
 							Gas Price
 						</Heading>
-						{/* TODO: Fix onPress not working on the refresh Icon */}
 						<Icon name="sync-alt" size={30} style={styles.refreshButton} onPress={this.fetch.bind(this)} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"} />
 					</Box>
 					<VStack space={4} alignItems="center">
