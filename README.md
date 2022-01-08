@@ -1,5 +1,10 @@
 <img width="100" height="100" src="https://github.com/colinmarsch/gas.eth/raw/main/android/play_store_512.png">
 
+<p align="center">
+  <img width="25%" src="https://github.com/colinmarsch/gas.eth/raw/main/android/light_ss.png">
+  <img width="25%" src="https://github.com/colinmarsch/gas.eth/raw/main/android/dark_ss.png">
+</p>
+
 gas.eth is a React Native application that allows you to view the current gas prices (in gwei) on the Ethereum blockchain. 
 It provides a simple, clean interface (with dark mode support!) to easily get the information you need without any distractions.
 
