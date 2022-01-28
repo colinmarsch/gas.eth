@@ -11,9 +11,13 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		35C15BC104D817112489538D /* libPods-GasTracker-GasTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D302BADAB35DAAEEF1B2CD /* libPods-GasTracker-GasTrackerTests.a */; };
+		6BDEE7C509C01E8E7BB603D8 /* libPods-GasTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD37921AC4EDC5F1541AE58 /* libPods-GasTracker.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		ADEECEFEAE5997E8696323F6 /* libPods-GasTracker-GasTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D49D1E69ABD76C71318A37 /* libPods-GasTracker-GasTrackerTests.a */; };
-		D1DB7A720C34C49294340464 /* libPods-GasTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3A8C05645567256FEBA07C /* libPods-GasTracker.a */; };
+		E59580DF27A37F520082A55A /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E59580CF27A37F520082A55A /* FontAwesome5_Regular.ttf */; };
+		E59580E327A37F520082A55A /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E59580D327A37F520082A55A /* FontAwesome5_Solid.ttf */; };
+		E59580E427A37F520082A55A /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E59580D427A37F520082A55A /* FontAwesome.ttf */; };
+		E59580E627A37F520082A55A /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E59580D627A37F520082A55A /* FontAwesome5_Brands.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +34,23 @@
 		00E356EE1AD99517003FC87E /* GasTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GasTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GasTrackerTests.m; sourceTree = "<group>"; };
-		02A4E05EEB36BA051459B205 /* Pods-GasTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker.release.xcconfig"; path = "Target Support Files/Pods-GasTracker/Pods-GasTracker.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GasTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GasTracker/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GasTracker/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GasTracker/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GasTracker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GasTracker/main.m; sourceTree = "<group>"; };
-		15D49D1E69ABD76C71318A37 /* libPods-GasTracker-GasTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasTracker-GasTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B3A8C05645567256FEBA07C /* libPods-GasTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D302BADAB35DAAEEF1B2CD /* libPods-GasTracker-GasTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasTracker-GasTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD37921AC4EDC5F1541AE58 /* libPods-GasTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7224B3B3D81935BAF6D43FD4 /* Pods-GasTracker-GasTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker-GasTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		80D1A5E3C8DA5645358742E8 /* Pods-GasTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker.debug.xcconfig"; path = "Target Support Files/Pods-GasTracker/Pods-GasTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GasTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8A3AAB67C4B1C658990C6AF4 /* Pods-GasTracker-GasTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker-GasTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B0E2ABFE15E28E6F3390C253 /* Pods-GasTracker-GasTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker-GasTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
-		E7129A7E1B83A18299118F99 /* Pods-GasTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker.debug.xcconfig"; path = "Target Support Files/Pods-GasTracker/Pods-GasTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		912E4DCABB764C52D24B87DB /* Pods-GasTracker-GasTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker-GasTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B60A4A61E6364A51581027B7 /* Pods-GasTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasTracker.release.xcconfig"; path = "Target Support Files/Pods-GasTracker/Pods-GasTracker.release.xcconfig"; sourceTree = "<group>"; };
+		E59580CF27A37F520082A55A /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		E59580D327A37F520082A55A /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		E59580D427A37F520082A55A /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		E59580D627A37F520082A55A /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEECEFEAE5997E8696323F6 /* libPods-GasTracker-GasTrackerTests.a in Frameworks */,
+				35C15BC104D817112489538D /* libPods-GasTracker-GasTrackerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1DB7A720C34C49294340464 /* libPods-GasTracker.a in Frameworks */,
+				6BDEE7C509C01E8E7BB603D8 /* libPods-GasTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,10 +94,10 @@
 		044231B86571D3F378C4E9DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E7129A7E1B83A18299118F99 /* Pods-GasTracker.debug.xcconfig */,
-				02A4E05EEB36BA051459B205 /* Pods-GasTracker.release.xcconfig */,
-				8A3AAB67C4B1C658990C6AF4 /* Pods-GasTracker-GasTrackerTests.debug.xcconfig */,
-				B0E2ABFE15E28E6F3390C253 /* Pods-GasTracker-GasTrackerTests.release.xcconfig */,
+				80D1A5E3C8DA5645358742E8 /* Pods-GasTracker.debug.xcconfig */,
+				B60A4A61E6364A51581027B7 /* Pods-GasTracker.release.xcconfig */,
+				912E4DCABB764C52D24B87DB /* Pods-GasTracker-GasTrackerTests.debug.xcconfig */,
+				7224B3B3D81935BAF6D43FD4 /* Pods-GasTracker-GasTrackerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -111,8 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				7B3A8C05645567256FEBA07C /* libPods-GasTracker.a */,
-				15D49D1E69ABD76C71318A37 /* libPods-GasTracker-GasTrackerTests.a */,
+				5DD37921AC4EDC5F1541AE58 /* libPods-GasTracker.a */,
+				50D302BADAB35DAAEEF1B2CD /* libPods-GasTracker-GasTrackerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				E59580C727A37F160082A55A /* Fonts */,
 				13B07FAE1A68108700A75B9A /* GasTracker */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* GasTrackerTests */,
@@ -148,6 +157,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E59580C727A37F160082A55A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E59580D427A37F520082A55A /* FontAwesome.ttf */,
+				E59580D627A37F520082A55A /* FontAwesome5_Brands.ttf */,
+				E59580CF27A37F520082A55A /* FontAwesome5_Regular.ttf */,
+				E59580D327A37F520082A55A /* FontAwesome5_Solid.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,12 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GasTrackerTests" */;
 			buildPhases = (
-				EF177948399E6D215502DA82 /* [CP] Check Pods Manifest.lock */,
+				7EFE6EA92DD954B8DC0586F7 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D1466F0F75C7662A72E49B46 /* [CP] Embed Pods Frameworks */,
-				A0DB1809553C5C83AE2C048A /* [CP] Copy Pods Resources */,
+				E48FEA7CEA1B0EEE813510B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +195,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GasTracker" */;
 			buildPhases = (
-				56A5D4EE2BE54681F5F1859F /* [CP] Check Pods Manifest.lock */,
+				8EFE3D97F1D5A076FBF3E539 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				5219554890905CC6431F181B /* [CP] Embed Pods Frameworks */,
-				8CF5B1205DEA641A61599F11 /* [CP] Copy Pods Resources */,
+				D30F6658383F3898961E46F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,7 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				E59580DF27A37F520082A55A /* FontAwesome5_Regular.ttf in Resources */,
+				E59580E627A37F520082A55A /* FontAwesome5_Brands.ttf in Resources */,
+				E59580E327A37F520082A55A /* FontAwesome5_Solid.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E59580E427A37F520082A55A /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,24 +286,29 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		5219554890905CC6431F181B /* [CP] Embed Pods Frameworks */ = {
+		7EFE6EA92DD954B8DC0586F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GasTracker/Pods-GasTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GasTracker/Pods-GasTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GasTracker-GasTrackerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GasTracker/Pods-GasTracker-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		56A5D4EE2BE54681F5F1859F /* [CP] Check Pods Manifest.lock */ = {
+		8EFE3D97F1D5A076FBF3E539 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +330,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8CF5B1205DEA641A61599F11 /* [CP] Copy Pods Resources */ = {
+		D30F6658383F3898961E46F5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,7 +347,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GasTracker/Pods-GasTracker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A0DB1809553C5C83AE2C048A /* [CP] Copy Pods Resources */ = {
+		E48FEA7CEA1B0EEE813510B5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,45 +362,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D1466F0F75C7662A72E49B46 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GasTracker-GasTrackerTests/Pods-GasTracker-GasTrackerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF177948399E6D215502DA82 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GasTracker-GasTrackerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +416,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A3AAB67C4B1C658990C6AF4 /* Pods-GasTracker-GasTrackerTests.debug.xcconfig */;
+			baseConfigurationReference = 912E4DCABB764C52D24B87DB /* Pods-GasTracker-GasTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +443,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0E2ABFE15E28E6F3390C253 /* Pods-GasTracker-GasTrackerTests.release.xcconfig */;
+			baseConfigurationReference = 7224B3B3D81935BAF6D43FD4 /* Pods-GasTracker-GasTrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +467,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7129A7E1B83A18299118F99 /* Pods-GasTracker.debug.xcconfig */;
+			baseConfigurationReference = 80D1A5E3C8DA5645358742E8 /* Pods-GasTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +494,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02A4E05EEB36BA051459B205 /* Pods-GasTracker.release.xcconfig */;
+			baseConfigurationReference = B60A4A61E6364A51581027B7 /* Pods-GasTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
