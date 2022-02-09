@@ -16,5 +16,4 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
       - name: Build with Gradle
-        run: cd android
-        run: ./gradlew build
+        run: cd android && ./gradlew build
