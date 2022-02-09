@@ -4,6 +4,12 @@ import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { format } from "date-fns";
 import Toast from 'react-native-toast-message';
+import ReactNativeHapticFeedback from "react-native-haptic-feedback";
+
+const hapticOptions = {
+	enableVibrateFallback: true,
+	ignoreAndroidSystemSettings: false
+};
 
 export function PriceTile(props) {
 	return (
@@ -52,7 +58,7 @@ export class GasPrice extends React.Component {
 			theme: props.theme,
 		}
 
-		this.fetch()
+		this.fetch(false)
 	}
 
 	computeIconDelta(prev, curr) {
@@ -65,8 +71,12 @@ export class GasPrice extends React.Component {
 		}
 	}
 
-	fetch() {
+	fetch(press) {
 		var context = this;
+
+		if (press) {
+			ReactNativeHapticFeedback.trigger("impactLight", hapticOptions);
+		}
 
 		fetch('https://api.gasprice.io/v1/estimates')
 			.then((response) => response.json())
@@ -108,7 +118,7 @@ export class GasPrice extends React.Component {
 						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"}>
 							Gas Price
 						</Heading>
-						<Icon name="sync-alt" size={30} style={styles.refreshButton} onPress={this.fetch.bind(this)} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"} />
+						<Icon name="sync-alt" size={30} style={styles.refreshButton} onPress={() => { this.fetch(true) }} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"} />
 					</Box>
 					<VStack space={4} alignItems="center">
 						<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} iconName={this.state.instantIcon} description="Almost-guaranteed next block inclusion" />
