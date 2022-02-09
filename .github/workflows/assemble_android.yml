@@ -1,15 +1,12 @@
-name: Build Android
+name: Assemble Android
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches: 
-      - main
 
 jobs:
-  build-android:
+  assemble-android:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
