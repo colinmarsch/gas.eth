@@ -18,4 +18,4 @@ jobs:
       - name: Install npm dependencies
         run: npm install
       - name: Build with Gradle
-        run: cd android && ./gradlew build
+        run: cd android && ./gradlew buildDebug
