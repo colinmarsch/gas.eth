@@ -4,12 +4,6 @@ import { VStack, Box, Heading, NativeBaseProvider } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { format } from "date-fns";
 import Toast from 'react-native-toast-message';
-import ReactNativeHapticFeedback from "react-native-haptic-feedback";
-
-const hapticOptions = {
-	enableVibrateFallback: true,
-	ignoreAndroidSystemSettings: false
-};
 
 export function PriceTile(props) {
 	return (
@@ -57,8 +51,16 @@ export class GasPrice extends React.Component {
 			ecoIcon: "minus",
 			theme: props.theme,
 		}
+	}
 
-		this.fetch(false)
+	componentDidMount() {
+		this.interval = setInterval(async () => {
+			this.fetch();
+		}, 3000);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.interval);
 	}
 
 	computeIconDelta(prev, curr) {
@@ -71,12 +73,8 @@ export class GasPrice extends React.Component {
 		}
 	}
 
-	fetch(press) {
+	fetch() {
 		var context = this;
-
-		if (press) {
-			ReactNativeHapticFeedback.trigger("impactLight", hapticOptions);
-		}
 
 		fetch('https://api.gasprice.io/v1/estimates')
 			.then((response) => response.json())
@@ -114,12 +112,7 @@ export class GasPrice extends React.Component {
 		return (
 			<>
 				<NativeBaseProvider>
-					<Box style={styles.headerBox}>
-						<Heading textAlign="center" mb="8" mt="8" style={styles.headingText} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"}>
-							Gas Price
-						</Heading>
-						<Icon name="sync-alt" size={30} style={styles.refreshButton} onPress={() => { this.fetch(true) }} color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"} />
-					</Box>
+					<Heading textAlign="center" mb="8" mt="8" color={this.state.theme === 'dark' ? "#FFFFFF" : "#343434"}>Gas Price</Heading>
 					<VStack space={4} alignItems="center">
 						<PriceTile bgColor="#F54634" title="Instant" price={Math.ceil(this.state.result.instant.feeCap)} iconName={this.state.instantIcon} description="Almost-guaranteed next block inclusion" />
 						<PriceTile bgColor="#005FF9" title="Fast" price={Math.ceil(this.state.result.fast.feeCap)} iconName={this.state.fastIcon} description="Useful if not minting NFTs" />
@@ -160,17 +153,6 @@ const styles = StyleSheet.create({
 		color: "white",
 		textAlign: "center",
 		paddingTop: 12,
-	},
-	headerBox: {
-		flexDirection: 'row',
-		justifyContent: 'space-between',
-	},
-	headingText: {
-		paddingStart: 24,
-	},
-	refreshButton: {
-		alignSelf: 'center',
-		paddingEnd: 26,
 	},
 	lastUpdatedText: {
 		fontSize: 16,
