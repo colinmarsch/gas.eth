@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "date-fns": "^2.29.1",
+    "date-fns": "^2.29.2",
     "native-base": "^3.4.12",
     "react": "17.0.2",
     "react-native": "0.68.3",
