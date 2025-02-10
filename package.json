@@ -11,7 +11,7 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "native-base": "^3.4.28",
-    "react": "17.0.2",
+    "react": "19.0.0",
     "react-native": "0.68.7",
     "react-native-safe-area-context": "^5.1.0",
     "react-native-toast-message": "^2.2.1",
