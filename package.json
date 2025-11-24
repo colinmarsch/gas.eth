@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
-    "@babel/runtime": "^7.28.2",
+    "@babel/runtime": "^7.28.4",
     "@react-native-community/eslint-config": "^3.1.0",
     "eslint": "9.39.1",
     "metro-react-native-babel-preset": "^0.77.0"
